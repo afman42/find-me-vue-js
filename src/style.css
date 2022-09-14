@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.divBox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.divBox > .box {
+    margin-right: 10px;
+}
+
+
+.box {
+    padding: 100px 100px 100px 100px;
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    text-align: center;
+    align-items: center;
+}
+
+.buttonGroup > button{
+    margin-right: 10px;
+}
+
+.buttonGroup > span {
+    margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+    .divBox {
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+    .box {
+        padding: 15% 15%;
+        margin-bottom: 10px;
+    }
+}
