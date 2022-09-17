@@ -39,17 +39,18 @@ export default defineComponent({
   methods: {
     clickDiv(boxIndex: number, index: number) {
       if (this.toggleStart) {
-        if (!this.divClick) {
-          this.divClick = true
-          if (boxIndex == index) {
-            this.result = 'Menang';
-          } else {
-            this.result = 'Kalah'
+        if (this.watchTimer == 0) {
+          if (!this.divClick) {
+            this.divClick = true
+            if (boxIndex == index) {
+              this.result = 'Menang';
+            } else {
+              this.result = 'Kalah'
+            }
+            this.toggleFinish = true
+            this.boxText = 'Aku';
           }
-          this.toggleFinish = true
-          this.boxText = 'Aku';
         }
-
       }
     },
     move() {
